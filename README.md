@@ -9,3 +9,7 @@ Adding ML model into OMLT.
 [ONNX 学习笔记](https://zhuanlan.zhihu.com/p/346511883)
 
 [onnx](https://github.com/onnx/onnx)
+
+[How can I convert a LightGBM model to ONXX?](https://stackoverflow.com/questions/72760638/how-can-i-convert-a-lightgbm-model-to-onxx)
+
+[Convert a pipeline with a LightGbm model](http://onnx.ai/sklearn-onnx/auto_examples/plot_pipeline_lightgbm.html)
