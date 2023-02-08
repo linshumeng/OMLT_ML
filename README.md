@@ -15,3 +15,5 @@ Adding ML model into OMLT.
 [Convert a pipeline with a LightGbm model](http://onnx.ai/sklearn-onnx/auto_examples/plot_pipeline_lightgbm.html)
 
 [onnxmltools 1.10.0 documentation » API Summary](http://www.xavierdupre.fr/app/onnxmltools/helpsphinx/api_summary.html#converters)
+
+[Decision Tree from Scratch in Python](https://towardsdatascience.com/decision-tree-from-scratch-in-python-46e99dfea775)
