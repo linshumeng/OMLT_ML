@@ -1,4 +1,4 @@
-# OMLT
+# [OMLT](https://github.com/linshumeng/OMLT/tree/main/tests)
 
 ## io
 
@@ -69,12 +69,19 @@ from omlt.neuralnet import (
 
 They compare the output from reformulation with the keras predicted one.
 
-# scikit-learn
+# [scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn/tree/tests)
 
-They create an array with true result to fit and predict
+- toy sample: X, y, T
+- iris dataset
+- diabetes dataset
 
 # Future work
 
+- Generate a tree model
+  - for the following tests
 - Result from tree parser
+  - dict has every item
 - Result from reformulation
-- Result comparison from omlt and original package
+  - Same as hard code GT
+  - Same as prediction from package
+  - Scalling
