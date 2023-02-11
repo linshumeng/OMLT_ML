@@ -17,3 +17,7 @@ Adding ML model into OMLT.
 [onnxmltools 1.10.0 documentation » API Summary](http://www.xavierdupre.fr/app/onnxmltools/helpsphinx/api_summary.html#converters)
 
 [Decision Tree from Scratch in Python](https://towardsdatascience.com/decision-tree-from-scratch-in-python-46e99dfea775)
+
+[通俗理解 kaggle 比赛大杀器 xgboost](https://blog.csdn.net/v_JULY_v/article/details/81410574)
+
+[XGBoost 算法梳理](https://zhuanlan.zhihu.com/p/58292935)
