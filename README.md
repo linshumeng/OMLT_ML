@@ -21,3 +21,5 @@ Adding ML model into OMLT.
 [通俗理解 kaggle 比赛大杀器 xgboost](https://blog.csdn.net/v_JULY_v/article/details/81410574)
 
 [XGBoost 算法梳理](https://zhuanlan.zhihu.com/p/58292935)
+
+[Why does XGBoost have a learning rate?](https://stats.stackexchange.com/questions/354484/why-does-xgboost-have-a-learning-rate)
