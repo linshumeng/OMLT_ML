@@ -23,3 +23,5 @@ Adding ML model into OMLT.
 [XGBoost 算法梳理](https://zhuanlan.zhihu.com/p/58292935)
 
 [Why does XGBoost have a learning rate?](https://stats.stackexchange.com/questions/354484/why-does-xgboost-have-a-learning-rate)
+
+[Operator Schemas](https://github.com/onnx/onnx/blob/main/docs/Operators-ml.md)
