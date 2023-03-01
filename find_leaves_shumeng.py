@@ -67,6 +67,28 @@ onnx_model = convert(lgb_model,
 graph = onnx_model.graph
 
 # Parse the onnx, default left true
+# iterate through inputs of the graph
+for input in graph.input:
+    print(input.name, end=": ")
+    # get type of input tensor
+    tensor_type = input.type.tensor_type
+    # check if it has a shape:
+    if (tensor_type.HasField("shape")):
+        # iterate through dimensions of the shape:
+        for d in tensor_type.shape.dim:
+            # the dimension may have a definite (integer) value or a symbolic identifier or neither:
+            if (d.HasField("dim_value")):
+                n_input = d.dim_value
+                print(d.dim_value, end=", ")  # known dimension
+            elif (d.HasField("dim_param")):
+                # unknown dimension with symbolic name
+                print(d.dim_param, end=", ")
+            else:
+                print("?", end=", ")  # unknown dimension with no name
+    else:
+        print("unknown rank", end="")
+
+# print(n_input)
 
 
 def _node_attributes(node):
@@ -316,7 +338,7 @@ for i in tree_ids:
 
         for leaf in splits[split]['right_leaves']:
             leaves[leaf]['bounds'][var][0] = splits[split]['th']
-print(leaves_dic, splits_dic)
+# print(leaves_dic, splits_dic)
 # ------ Pyomo section
 # Reassign none bounds
 
@@ -335,7 +357,7 @@ def reassign_none_bounds(leaves, input_bounds):
         The modified leaves dict without any bounds that are listed as None
     """
     L = np.array(list(leaves.keys()))
-    features = np.arange(0, len(set(nodes_feature_ids)))
+    features = np.arange(0, n_input)
 
     for l in L:
         for f in features:
