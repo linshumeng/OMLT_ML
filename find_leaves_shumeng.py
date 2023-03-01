@@ -296,6 +296,7 @@ for t in tree_ids:
 # ------ End
 
 # Find bounds
+# take care of this features, it is only the # of features in a tree not for all
 features = np.arange(0, len(set(nodes_feature_ids)))
 for i in tree_ids:
     splits = splits_dic[i]
@@ -305,10 +306,9 @@ for i in tree_ids:
     for th in features:
         for leaf in leaves:
             leaves[leaf]['bounds'][th] = [None, None]
-
-for i in tree_ids:
-    splits = splits_dic[i]
-    leaves = leaves_dic[i]
+# for i in tree_ids:
+#     splits = splits_dic[i]
+#     leaves = leaves_dic[i]
     for split in splits:
         var = splits[split]['col']
         for leaf in splits[split]['left_leaves']:
@@ -316,7 +316,7 @@ for i in tree_ids:
 
         for leaf in splits[split]['right_leaves']:
             leaves[leaf]['bounds'][var][0] = splits[split]['th']
-
+print(leaves_dic, splits_dic)
 # ------ Pyomo section
 # Reassign none bounds
 
