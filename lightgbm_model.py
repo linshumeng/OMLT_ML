@@ -60,10 +60,13 @@ def find_all_children_leaves(split, splits_dict, leaves_dict):
 
     return all_leaves
 
-def parse_model(model_location):
-    txt_model = lgb.Booster(model_file = model_location)
-    # change the model to json format
-    whole_model = txt_model.dump_model()
+def parse_model(model):
+    if str(type(model)) == "<class 'lightgbm.basic.Booster'>":
+        whole_model = model.dump_model()
+    else:
+        model = lgb.Booster(model_file = model)
+        # change the model to json format
+        whole_model = model.dump_model()
 
     tree = {}
     for i in range(whole_model['tree_info'][-1]['tree_index']+1):
@@ -120,7 +123,7 @@ def parse_model(model_location):
     nested_leaves = {}
     nested_thresholds = {}
 
-    n_inputs = txt_model.num_feature()
+    n_inputs = model.num_feature()
     for index in tree:
 
         splits = tree[index]
